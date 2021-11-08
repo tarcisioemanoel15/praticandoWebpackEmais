@@ -1,3 +1,18 @@
 body{ background: rgb(195, 248, 5); }
 h1{font-size: 50px; text-align: center; color: rgb(233, 13, 233);}
 h6, p{font-size: 50px; color: red; text-align: center;}
+
+.gerando{
+    width: 20%;
+    background: aqua;
+}
+
+.validoInvalido{
+    width: 20%;
+    background: aqua;
+}
+
+.gerasenha{
+    width: 20%;
+    background: aqua;
+}

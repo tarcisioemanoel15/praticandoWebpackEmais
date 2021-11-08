@@ -22,8 +22,3 @@ geradigito(){
     return this.separa(novocpf);
 }
 }
-
-
-
-
-

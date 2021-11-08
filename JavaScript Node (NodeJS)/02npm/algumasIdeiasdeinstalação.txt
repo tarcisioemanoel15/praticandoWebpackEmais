@@ -1,0 +1,14 @@
+npm init -y     ......  para iniciar 
+npm install babel ......babel pode ser qualquer coisa
+
+npm i babel --save-dev .... para salvar numa devDependencia
+npm i babel --save-prod .... para salvar numa dependencia
+npm i express@2.1.0 .... pra alterar
+npm update ..... para atualizar
+npm uninstall babel .... desinstalar
+npm ls .... mostrar lista
+npm i webpack --save-dev
+npm ls depth = 0
+npm ls depth = 1
+npm outdated ....  atualizar
+-E prara remover ^  

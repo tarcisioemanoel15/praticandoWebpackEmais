@@ -1,10 +1,12 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 import './assets/css/style.css';
+
 import Gerandocpf from './modules/geraCPF';
 import Validacpf from './modules/ValidaCPF';
-
-
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
+import formGerasenha from './modules/formGerasenha';
+formGerasenha();
 
 
 // gera cpf
@@ -14,7 +16,7 @@ import Validacpf from './modules/ValidaCPF';
     resultado.innerHTML = gera.geradigito();
 })();
 
-// cpf valido ou falso
+// cpf valido ou falso            
 (function(){
     const display = document.querySelector('.envcpf');
     const btn = document.querySelector('.btn');
@@ -29,4 +31,4 @@ import Validacpf from './modules/ValidaCPF';
         }
     })
 })();
-            
+ 

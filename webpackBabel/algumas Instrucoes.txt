@@ -1,0 +1,92 @@
+
+.......................................................................................
+..[OBS]										     ..	
+.."css-loader": "^6.5.1",						             ..
+.."regenerator-runtime": "^0.13.9",						     ..
+.. deleta estes dois e instala na depndeses=>> npm i core-js regenerator-runtime     ..
+.......................................................................................
+
+1-   npm init -y
+
+2-  npm install --save-dev @babel/cli @babel/preset-env @babel/core 
+    babel-loader webpack webpack-cli regenerator-runtime core-js@2
+
+
+3-  .gitignore
+
+4- webpack.config.js
+
+
+o numero 5 sao do pastas criadas e alguns index;
+5- cria duas pastas 1- public  2-src
+   public -> index.html, assets -> js
+   
+   src -> assets, modules
+  assets -> css, img
+  modules -> js
+
+
+
+
+6-  configurar o webpack.config.js logo  baixo
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+	const path = require('path');
+
+module.exports = {
+
+    mode: 'development',
+    entry: './src/main.js',
+    output: {
+        path: path.resolve(__dirname, 'public', 'assets', 'js'),
+        filename: 'bundle.js'
+    },
+
+    module:{
+        rules:[{
+            exclude: /node_modules/,
+            test: /\.js$/,
+
+            use:{
+                loader: 'babel-loader',
+
+                options:{
+                    presets: ['@babel/env']
+                }
+            }
+        }]
+    },
+
+    devtool: 'source-map'
+};
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+7-  vai na pasta package.json localiza o nome "test" e deleta e sobrescreve --->    "dev": " webpack -w "   
+    vai no terminal ----------> npm run dev
+
+
+
+
+
+8- para adicionas o css vai no arquivo webpackconfig e acresenta la no final entr o cochet  e a chave
+ex: [{},{..........}] digita o que ta em baixo
+  
+        }, {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
+
+9- finaliza chamando no terminal ----> npm run dev
+
+
+10- para garantir que vai rodar nos navegaroders antigos posiveis coloca no man.js logo abaixo
+
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
+import './assets/css/style.css'; 
+

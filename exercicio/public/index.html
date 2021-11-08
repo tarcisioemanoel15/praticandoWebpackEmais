@@ -7,8 +7,9 @@
     <title>Modelo</title>
 </head> 
 <body>
-    <h1>Modelo</h1>
-    <h6> modelo para outros arquivos </h6>
+    <h1>Cria CPFS</h1>
+    <h6> CPFS validos ou não </h6>
+    <p>geradoura de Senha</p>
     <p>npm install</p>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -35,22 +36,24 @@
     <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
     <div class="gerasenha">
-
-    <h3>geradoura de senha</h3>
-    
-    <ul>
-
-        <li> quantidade de caracter <input type="number"></li>
-        <li> add letras Maiuscula <input type="checkbox" ></li>
-        <li> add letras Minuscula<input type="checkbox" ></li>
-        <li> add Numeros <input type="checkbox" checked ></li>
-        <li> add sinbolos<input type="checkbox" ></li>
-    </ul>
+        <h3>geradoura de senha</h3>
+        <ul>
+            <li> quantidade de caracter <input value="10" type="number" min = '1' max = '50' class="qtd-numerica"></li>
+            <li> add letras Maiuscula <input type="checkbox" class="chk-maiuscula"></li>
+            <li> add letras Minuscula<input type="checkbox" class="chk-menuscula"></li>
+            <li> add Numeros <input type="checkbox" checked class="chk-numeros"></li>
+            <li> add sinbolos<input type="checkbox" class="chk-sinbolos"></li>
         
-    <div class="senha-gerada"></div>
-
-
+            <li><button class="gerar-senha">Selecione as opcões</button></li>
+        </ul>
+        <div class="senha-gerada"></div>
     </div>
+
+    
+
+        
+
+
     <script src="assets/js/bundle.js"></script>
 </body>
 </html>
